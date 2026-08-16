@@ -31,7 +31,7 @@ No build step, no dependencies. Just static files.
 /
 ├── index.html          # All 11 sections
 ├── style.css           # All styling, animations, responsive design
-├── script.js           # Interactivity, music player, mini-game, easter egg
+├── script.js           # Interactivity, music player, mini-game
 ├── README.md           # This file
 └── assets/
     ├── music/          # Add your song.mp3 here
