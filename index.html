@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Made This For You</title>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ===== Section 1: Opening ===== -->
+    <section id="section1" class="section active">
+        <div class="animated-bg">
+            <div class="stars"></div>
+            <div class="particles"></div>
+            <div class="glow"></div>
+        </div>
+        <div class="content opening">
+            <div class="opening-mark fade-in">💌</div>
+            <h1 class="opening-title fade-in delay-1">Hey...</h1>
+            <p class="opening-sub fade-in delay-2">Main normally itna sab nahi karta 😭</p>
+            <p class="opening-sub fade-in delay-3">But iss baar laga ki sirf ek "sorry" text bhejna enough nahi hoga.</p>
+            <p class="opening-sub opening-emph fade-in delay-4">So... I made this for you.</p>
+            <button class="btn btn-glow" id="startBtn">🎧 Start</button>
+        </div>
+    </section>
+
+    <!-- ===== Section 2: What I Did ===== -->
+    <section id="section2" class="section">
+        <div class="animated-bg">
+            <div class="stars"></div>
+            <div class="particles"></div>
+        </div>
+        <div class="content admit">
+            <span class="kicker fade-in">The Truth · 01</span>
+            <h2 class="admit-title fade-in-up delay-1">Okay... let's start with the obvious.</h2>
+            <div class="admit-list">
+                <p class="fade-in-up delay-2">Maine tumhe ignore kiya.</p>
+                <p class="fade-in-up delay-3">Messages mein bhi...</p>
+                <p class="fade-in-up delay-4">Aur school mein bhi.</p>
+            </div>
+            <p class="admit-closer fade-in-up delay-5">And honestly... <strong>I shouldn't have done that.</strong></p>
+            <button class="btn" onclick="nextSection('section2', 'section3')">Continue →</button>
+        </div>
+    </section>
+
+    <!-- ===== Section 3: What You Might Have Thought ===== -->
+    <section id="section3" class="section">
+        <div class="animated-bg">
+            <div class="stars"></div>
+            <div class="particles"></div>
+        </div>
+        <div class="content">
+            <h2 class="fade-in"><span class="emoji">💭</span> What You Might Have Thought</h2>
+            <p class="fade-in delay-1">Shayad tumne socha...</p>
+            <div class="card-flip-container">
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">"Kya maine kuch galat kiya?"</div>
+                        <div class="flip-card-back">Nahi. Tumhari galti nahi thi.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-flip-container">
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">"Kya ye mujhse baat nahin karna chahta?"</div>
+                        <div class="flip-card-back">Aisa nahin tha.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-flip-container">
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">"Phir ignore kyu kiya?"</div>
+                        <div class="flip-card-back">Honestly... mujhe khud bhi pata nahin ki maine aisa kyu kiya.</div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn" onclick="nextSection('section3', 'section4')">Continue →</button>
+        </div>
+    </section>
+
+    <!-- ===== Section 4: Actual Apology ===== -->
+    <section id="section4" class="section">
+        <div class="animated-bg">
+            <div class="stars"></div>
+            <div class="particles"></div>
+        </div>
+        <div class="content apology-section">
+            <h2 class="fade-in-heart"><span class="emoji">❤️</span> The Actual Apology</h2>
+            <p class="fade-in-up delay-1">Mujhe tumhe ignore karna nahin tha.</p>
+            <p class="fade-in-up delay-2">Honestly, main tumhe ignore karna chahta bhi nahin tha.</p>
+            <p class="fade-in-up delay-3">Pata nahi kyun, but maine phir bhi kar diya... messages mein bhi, aur school mein bhi.</p>
+            <p class="fade-in-up delay-4">I know ki meri taraf se ye weird aur hurtful laga hoga.</p>
+            <p class="fade-in-up delay-5">Mujhe tumse baat kar leni chahiye thi instead of ignoring you.</p>
+            <p class="fade-in-up delay-6" style="font-weight: bold; font-size: 1.2em;">I'm genuinely sorry.</p>
+            <p class="fade-in-up delay-7">Main ye excuse ke liye nahin keh raha. Galti meri thi.</p>
+            <button class="btn" onclick="nextSection('section4', 'section5')">Continue →</button>
+        </div>
+    </section>
+
+    <!-- ===== Section 5: What I Should've Done ===== -->
+    <section id="section5" class="section">
+        <div class="animated-bg">
+            <div class="stars"></div>
+            <div class="particles"></div>
+        </div>
+        <div class="content">
+            <h2 class="fade-in"><span class="emoji">💡</span> What I Should've Done</h2>
+            <p class="section-sub fade-in delay-1">Ignore karne ke bajaye... agar maine ye kiya hota:</p>
+            <div class="should-grid">
+                <div class="should-card fade-in-up delay-1">
+                    <div class="sc-icon">💬</div>
+                    <span class="sc-label">What I did</span>
+                    <div class="sc-wrong">Tumhara message dekh kar bhi ignore kar diya</div>
+                    <div class="sc-arrow">↓ instead</div>
+                    <span class="sc-label sc-label-right">What I should've done</span>
+                    <div class="sc-right">Turant reply kiya hota — "hey, busy tha par baat karenge"</div>
+                </div>
+                <div class="should-card fade-in-up delay-2">
+                    <div class="sc-icon">🏫</div>
+                    <span class="sc-label">What I did</span>
+                    <div class="sc-wrong">School mein tumse mila, par aankh milake nikal gaya</div>
+                    <div class="sc-arrow">↓ instead</div>
+                    <span class="sc-label sc-label-right">What I should've done</span>
+                    <div class="sc-right">Ruk kar haste hue "hi, kaise ho?" bola hota</div>
+                </div>
+                <div class="should-card fade-in-up delay-3">
+                    <div class="sc-icon">🤫</div>
+                    <span class="sc-label">What I did</span>
+                    <div class="sc-wrong">Poore din kuch na kehkar awkward chhod diya</div>
+                    <div class="sc-arrow">↓ instead</div>
+                    <span class="sc-label sc-label-right">What I should've done</span>
+                    <div class="sc-right">Sach bol diya hota — "sorry, ajeeb lag raha tha, par ignore nahi karna tha"</div>
+                </div>
+            </div>
+            <p class="should-foot fade-in delay-4">Choti baatein lagti hain... par exactly yahi baatein thi jo maine nahi kari. 😭</p>
+            <button class="btn" onclick="nextSection('section5', 'section6')">Continue →</button>
+        </div>
+    </section>
+
+    <!-- ===== Section 6: No Excuses ===== -->
+    <section id="section6" class="section">
+        <div class="animated-bg">
+            <div class="stars"></div>
+            <div class="particles"></div>
+        </div>
+        <div class="content nox">
+            <span class="kicker fade-in">No Excuses · 02</span>
+            <h2 class="nox-title fade-in-up delay-1"><span class="emoji">🧠</span> No Excuses</h2>
+            <div class="excuse-list">
+                <p class="fade-in-up delay-2">"Main busy tha."</p>
+                <p class="fade-in-up delay-3">"Mujhe pata nahi tha tumhe bura lagega."</p>
+                <p class="fade-in-up delay-4">"Bas mood off tha."</p>
+            </div>
+            <p class="nox-line fade-in-up delay-5">Reason hona aur excuse hona alag cheezein hain.</p>
+            <p class="nox-line fade-in-up delay-6">Jo bhi tha, usse tumhe ignore nahin karna chahiye tha.</p>
+            <p class="nox-final fade-in-up delay-7">So I'm not going to make excuses.<br><strong>I messed up. I'm sorry.</strong></p>
+            <button class="btn" onclick="nextSection('section6', 'section7')">Continue →</button>
+        </div>
+    </section>
+
+    <!-- ===== Section 7: Things I Appreciate ===== -->
+    <section id="section7" class="section">
+        <div class="animated-bg">
+            <div class="stars"></div>
+            <div class="particles"></div>
+        </div>
+        <div class="content">
+            <h2 class="fade-in"><span class="emoji">🌷</span> Things I Appreciate About You</h2>
+            <div class="appreciation-grid">
+                <div class="appreciation-card fade-in-up delay-1">
+                    <div class="app-icon">✨</div>
+                    <p>The way tum har cheez mein try karti ho — even that small thing, I notice.</p>
+                </div>
+                <div class="appreciation-card fade-in-up delay-2">
+                    <div class="app-icon">😂</div>
+                    <p>Tumhari laugh ek aise glow karti hai jaise poora room light ho jaye.</p>
+                </div>
+                <div class="appreciation-card fade-in-up delay-3">
+                    <div class="app-icon">💞</div>
+                    <p>Tum kabhi sirf sunte ho, par actually samajh bhi leti ho. Ye bahut khaas hai.</p>
+                </div>
+                <div class="appreciation-card fade-in-up delay-4">
+                    <div class="app-icon">🌟</div>
+                    <p>Tum itni genuine ho — kisike liye jhooth nahi bolti, sirf pyaar dikhati ho.</p>
+                </div>
+                <div class="appreciation-card fade-in-up delay-5">
+                    <div class="app-icon">😊</div>
+                    <p>Tumhari smile dekh kar dil accha ho jata hai — tum hasti ho toh sab theek lagta hai.</p>
+                </div>
+                <div class="appreciation-card fade-in-up delay-6">
+                    <div class="app-icon">💗</div>
+                    <p>Tumse baat karke dil halka ho jata hai — tumhare saath rehna hi alag feel hai.</p>
+                </div>
+            </div>
+            <button class="btn" onclick="nextSection('section7', 'section8')">Continue →</button>
+        </div>
+    </section>
+
+    <!-- ===== Section 8: Mini Game — Actions > Words ===== -->
+    <section id="section8" class="section">
+        <div class="animated-bg">
+            <div class="stars"></div>
+            <div class="particles"></div>
+        </div>
+        <div class="content">
+            <h2 class="fade-in"><span class="emoji">🎮</span> Actions &gt; Words</h2>
+            <div class="game-area" id="gameArea">
+                <!-- Intro -->
+                <div class="game-stage" id="stageIntro">
+                    <p class="game-line lead-line">You're right. Sorry bolna easy hai. Isliye maine sirf sorry nahi bola.</p>
+                    <p class="game-line">Tumne kaha tha... "Sirf sorry bolne se nahi chalega." Fair enough. 😭 Toh let's see if I can do better than just saying sorry.</p>
+                    <button class="btn" id="letsSeeBtn">Let's see →</button>
+                </div>
+
+                <!-- Level 1 & 2 -->
+                <div class="game-stage" id="stageLevel" style="display: none;">
+                    <span class="level-tag" id="levelTag"></span>
+                    <p class="game-line" id="levelSituation"></p>
+                    <div class="choices" id="choices"></div>
+                    <p class="game-result" id="gameResult"></p>
+                    <button class="btn" id="levelNextBtn" style="display: none;">Next →</button>
+                </div>
+
+                <!-- Level 3 — Slider -->
+                <div class="game-stage" id="stageSlider" style="display: none;">
+                    <span class="level-tag">Level 3 — The actual test</span>
+                    <p class="game-line" id="sliderText"></p>
+                    <div class="slider-wrap">
+                        <span class="slider-end">Words</span>
+                        <input type="range" id="effortSlider" min="0" max="100" value="50" />
+                        <span class="slider-end">Actions</span>
+                    </div>
+                    <p class="game-result" id="sliderResult"></p>
+                    <button class="btn" id="sliderNextBtn" style="display: none;">Next →</button>
+                </div>
+
+                <!-- Achievement -->
+                <div class="game-stage" id="stageAch" style="display: none;">
+                    <div class="achievement">
+                        <div class="ach-badge">🏆</div>
+                        <h3 class="ach-title">SORRY &ne; FIXED</h3>
+                    </div>
+                    <p class="game-line" id="achText"></p>
+                    <p class="game-line important-line" id="achImportant"></p>
+                    <button class="btn" id="continueBtn" style="display: none;" onclick="nextSection('section8', 'section10')">Continue →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Section 10: One Last Thing ===== -->
+    <section id="section10" class="section last-section">
+        <div class="content last-content">
+            <div class="last-heart fade-in">🤍</div>
+            <p class="fade-in-up delay-1">Bas ek last baat...</p>
+            <p class="fade-in-up delay-2">Main ye expect nahi kar raha ki tum instantly sab bhool jao.</p>
+            <p class="fade-in-up delay-3">Jo hua, woh hua.</p>
+            <p class="fade-in-up delay-4">Bas dil se sorry bolna tha.</p>
+            <p class="fade-in-up delay-5">Main tumhe ignore karna nahin chahta tha.</p>
+            <p class="last-emph fade-in-up delay-6">And I really hope ki aage se main better kar paun.</p>
+            <p class="last-sign fade-in-up delay-7">I'm genuinely sorry. 🤍</p>
+            <button class="btn" onclick="nextSection('section10', 'section11')">Continue →</button>
+        </div>
+    </section>
+
+    <!-- ===== Section 11: Final Screen ===== -->
+    <section id="section11" class="section">
+        <div class="animated-bg">
+            <div class="stars"></div>
+            <div class="particles"></div>
+        </div>
+        <div class="content finale">
+            <div class="finale-hearts fade-in">🤍 &nbsp;💗&nbsp; 🤍</div>
+            <p class="fade-in delay-1">Thank you for reading all of this.</p>
+            <p class="fade-in delay-2">I could've just said "sorry."</p>
+            <p class="finale-mid fade-in delay-3">But I wanted you to know that<br><strong>I actually mean it.</strong></p>
+            <p class="finale-emoji fade-in delay-4">🤍</p>
+            <p class="finale-sign fade-in delay-5">— Me</p>
+            <button class="btn btn-ghost fade-in delay-6" onclick="restartSite()">↻ Restart</button>
+        </div>
+        <!-- Easter Egg -->
+        <div class="easter-egg" id="easterEgg"></div>
+        <div class="easter-message" id="easterMessage">
+            <p>You found the secret 👀</p>
+            <p>Okay fine...</p>
+            <p>One more sorry. 😭</p>
+            <button class="btn" onclick="hideEasterMessage()">Close</button>
+        </div>
+    </section>
+
+    <!-- Scroll-down indicator (shows only when there is more to read/scroll) -->
+    <div class="scroll-arrow" id="scrollArrow" role="button" aria-label="Scroll down" tabindex="0">▼</div>
+
+    <!-- Background music (single continuous track) -->
+    <audio id="bgMusic" loop preload="auto"></audio>
+
+    <!-- Explicit, always-available sound control (guaranteed user gesture) -->
+    <button class="sound-toggle" id="soundToggle" type="button" aria-label="Play music">🔇</button>
+
+    <script src="script.js?v=3"></script>
+</body>
+</html>
